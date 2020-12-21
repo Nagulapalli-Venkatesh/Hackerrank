@@ -1,4 +1,4 @@
-n = int(input())
+''' n = int(input())
 arr=[]
 while(n>0):
     f,b,t,d = map(int,input().split(" "))
@@ -12,4 +12,17 @@ while(n>0):
     arr.append(y*t)
     
 for i in arr:
-    print(i)
+    print(i) '''
+    
+    
+    
+tm=int(input())
+while(tm>0):
+    f,b,t,d=map(int,input().split())
+    tol=0
+    while d>b:
+        tol=tol+(f+b)
+        d=d-(b-f)
+    tol+=d
+    tm=tm-1
+    print(tol*t)
