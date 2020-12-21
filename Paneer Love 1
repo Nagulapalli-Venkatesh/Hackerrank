@@ -1,0 +1,24 @@
+noOfdays=int(input())
+qtyOfpaneer = []
+costOfpaneer = []
+for i in range(noOfdays):
+    a,p=input().split()
+    qtyOfpaneer.append(int(a))
+    costOfpaneer.append(int(p))
+i=0
+cost=0
+while(i<noOfdays):
+    b=costOfpaneer[i]
+    pos=i+1
+    eat=qtyOfpaneer[i]
+    for j in range(i+1,noOfdays):
+        if costOfpaneer[j]<costOfpaneer[i]:
+            pos=j
+            break
+        else:
+            eat+=qtyOfpaneer[j]
+    else:
+        pos=noOfdays
+    cost+=costOfpaneer[i]*eat
+    i=pos
+print(cost)
