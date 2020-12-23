@@ -1,0 +1,9 @@
+n=int(input())
+l=list(map(int,input().split()))
+l2=list()
+l.sort()
+for i in range(0,n-1,2):
+    l2.append(str(l[i+1]))
+    l2.append(str(l[i]))
+for i in l2:
+    print(i,end=" ")
