@@ -1,0 +1,12 @@
+def ways(x,n,num=1,sum=0):
+    r=0
+    p=pow(num,n)
+    while p+sum<x:
+        r+=ways(x,n,num+1,p+sum)
+        num+=1
+        p=pow(num,n)
+    if p+sum==x:
+        r+=1
+    return r
+
+print(ways(int(input()),int(input())))
