@@ -1,0 +1,9 @@
+n=int(input())
+bm=[]
+for i in range(n):
+    bm.append(list(map(int,input().split())))
+for i in range(n):
+    for j in range(n):
+        m=bm[i][j] or bm[j][n-i-1] or bm[n-i-1][n-j-1] or bm[n-j-1][i]
+        print(m,end=" ")
+    print()
