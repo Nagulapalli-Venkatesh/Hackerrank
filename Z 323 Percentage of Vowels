@@ -1,6 +1,14 @@
 string = input()
+nStr = len(string) 
 vowels = [i for i in string if i in "AaEeIiOoUu"] 
-nVow = len(vowels)
-nStr = len(string)  
+nVow = len(vowels) 
 sol = (nVow/nStr)*100
-print('%.4f'%sol)
+print('%.4f' %sol)
+
+
+
+string = input()
+nStr = len(string) 
+nVow = len([i for i in string if i in "AaEeIiOoUu"])
+sol = (nVow/nStr)*100
+print('%.4f' %sol)
