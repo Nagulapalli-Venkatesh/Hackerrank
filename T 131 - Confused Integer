@@ -1,4 +1,4 @@
-import math
+''' import math
 def isPower(n):
     if (n==1): return True
     for x in range(2,int(math.sqrt(n))+1):
@@ -11,4 +11,16 @@ def isPower(n):
     return False
 
 if (isPower(int(input()))): print("yes")
+else: print("no") '''
+
+import math
+n=int(input())
+for i in range(2,int(math.sqrt(n))+1):
+    j = 2
+    while((i**j)<=n):
+        if ((i**j==n):
+            print("yes")
+            exit()
+    j+=1
+if n==1 : print("yes")
 else: print("no")
