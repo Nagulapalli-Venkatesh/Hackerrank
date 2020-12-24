@@ -1,4 +1,4 @@
-x,y = input().split()
+x,y = input().split() #x,y = map(int,input().split())
 if x==y:
     print("Did not participate")
 elif x<y:
