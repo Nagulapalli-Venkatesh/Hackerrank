@@ -1,0 +1,4 @@
+import math
+n=int(input())
+if n>=11: print(math.factorial(n)//(math.factorial(11)*math.factorial(x-11)))
+else: print(0)
