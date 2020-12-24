@@ -1,0 +1,13 @@
+k = int(input())
+n = int(input())
+a = input().split()
+x,r=k,0
+for i in range(n):
+    if k <= int(a[i]):
+        r=r+1
+        k=x
+        if x <= int(a[i]):
+            r = -2
+            break
+    k = k-int(a[i])
+print(r+1)
