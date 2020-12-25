@@ -1,12 +1,7 @@
-import math
-import os
-import random
-import re
-import sys
+Write a python program to calculate the area of the square where side of the square is given as input.
 
+SOLUTION
 
-
-if __name__ == '__main__':
-    side = int(input())
-    area = side*side
-    print(area)
+side = int(input())
+area = side*side
+print(area)
