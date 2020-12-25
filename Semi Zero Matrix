@@ -1,0 +1,16 @@
+n,m=map(int,input().split())
+a=[list(map(int,input().split()[0:m])) for i in range(n)]
+def change(a,n,m,i,j):
+    for x in range(m):
+        if(a[i][x]):a[i][x]=-1
+    for y in range(n):
+        if(a[y][j]):a[y][j]=-1
+for i in range(n):
+    for j in range(m):
+        if(a[i][j]==0):
+            change(a,n,m,i,j)
+for i in range(n):
+    for j in range(m):
+        if(a[i][j]==-1):a[i][j]=0
+for i in a:
+    print(' '.join(map(str,i)))
