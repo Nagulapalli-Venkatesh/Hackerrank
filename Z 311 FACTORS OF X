@@ -1,4 +1,15 @@
-'''def print_factors(x):
+#PROBLEM
+One day a teacher gave an assignment to the student to find the factors of a number. The student is not intrested to do the given 
+task and he was searching for the shortcuts. So, please help him by writing a program
+
+Input Format
+First line contains an integer T denoting the no.of testcases.
+The next T lines contains integers whose factors we have to determine
+Output Format
+Factors of number seperated by a space in the new line
+
+#SOLUTION
+def print_factors(x):
     factors=[]
     for i in range(1, x + 1):
         if x % i == 0:
@@ -9,7 +20,9 @@ n = int(input())
 for i in range(n):
     x = int(input())
     y = print_factors(x)
-    print(*y) '''
+    print(*y)
+
+OR
 
 t=int(input())
 a=[]
