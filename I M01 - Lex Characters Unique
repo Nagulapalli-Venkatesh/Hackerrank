@@ -1,3 +1,7 @@
 string = input()
 sol=sorted(list(set(string)))
 for i in sol: print(i,end="")
+
+
+sol=sorted(list(set(input())))
+for i in sol: print(i,end="")
