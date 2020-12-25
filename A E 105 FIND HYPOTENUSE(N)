@@ -3,6 +3,8 @@ Example:
 Given inputs 10 and 20 , here S1=10 and S2=20 and the expected output = 22.36
 Input Format
 Two integers denoting the length of the sides S1,S2
+Output Format
+print the length of the hypotenuse
 
 SOLUTION
 
