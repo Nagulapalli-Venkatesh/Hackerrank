@@ -1,3 +1,11 @@
+Write a program to calculate the hypotenuse of the right angled triangle where the two sides of a triangle S1, S2 are given as input.Print the output to the stdout in floating point format with exactly 2 decimal precession other the floating point number,no other extra information should be printed.
+Example:
+Given inputs 10 and 20 , here S1=10 and S2=20 and the expected output = 22.36
+Input Format
+Two integers denoting the length of the sides S1,S2
+
+SOLUTION
+
 from math import sqrt
 a = float(input())
 b = float(input())
