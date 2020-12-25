@@ -2,4 +2,4 @@ sol=sorted(list(set(input())))
 for i in sol: print(i,end="")
 
 
-print("".join(list(map(str,sorted(list(set(input())))))))
+print("".join(sorted(list(set(input())))))
