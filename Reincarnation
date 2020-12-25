@@ -1,2 +1,13 @@
+#PROBLEM
+In the world of numbers every number dies at some point and reincarnates. The newer generation will always surpass the previous generation 
+and hence every number X upon incarnation will be promoted with a power Y i.e. X will now become X raised to the power Y. The god of the 
+world of numbers needs a small break and hence has given you the task of reincarnating the incoming numbers after raising them to the power Y.
+
+Input Format
+Two numbers, X and Y.
+Output Format
+One number, X raised to the power Y.
+
+#SOLUTION
 x,y = map(int,input().split())
 print(pow(x,y))
