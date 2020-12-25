@@ -1,0 +1,10 @@
+n=int(input())
+s=0
+l=list(map(int,input().split()))
+for i in l:
+    if(i==1): s+=1
+    elif(i==2): s+=2
+    elif(i%2==0 and i%4==0 and i%3!=0): s+=2
+    elif(i%3==0 or i%5==0): s+=3
+    else: s+=4
+print(s)
