@@ -1,0 +1,10 @@
+n = int(input())
+a = list(map(int,input().strip().split(' ')))
+s = len(a) 
+sol = [] 
+for i in range(s): 
+    k = i + 1
+    for j in range(k,s): 
+        if a[i] == a[j] and a[i] not in sol: 
+            sol.append(a[i]) 
+print (*sol)
