@@ -27,3 +27,9 @@ Sample Output 0
 #SOLUTION
 p,q=map(int,input().split())
 print(1+(q*sum(int(x) for x in str(p))-1) % 9)
+
+OR
+
+p,q = map(int,input().split())
+i = p*q % 9
+print(i if i else 9)
