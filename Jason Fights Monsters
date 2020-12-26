@@ -1,0 +1,21 @@
+#PROBLEM
+Fight the Monsters!
+https://www.hackerrank.com/contests/w32/challenges/fight-the-monsters/problem
+
+Sample Input
+7 8 6
+16 19 7 11 23 8 16
+Sample Output
+4
+
+#SOLUTION
+n,hit,t=map(int,input().split())
+l = sorted([int(i) for i in input().split()[0:n]])
+res,h=0,0
+for i in l:
+    h = i // hit+(1 if i%hit else 0)
+    if t >= h:
+        t -= h
+        res += 1
+    else: break
+print(res)
