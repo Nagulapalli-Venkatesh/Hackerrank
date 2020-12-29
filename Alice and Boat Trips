@@ -1,6 +1,10 @@
-n,c,m = input().strip().split(' ')
-n,c,m = [int(n),int(c),int(m)]
-p = list(map(int, input().strip().split(' ')))
+'''n,c,m = input().strip().split(' ')
+n,c,m = [int(n),int(c),int(m)] '''
+
+
+
+n,c,m = map(int,input().split())
+p = list(map(int, input().split()))
 flag=0
 for i in range(n):
     if(p[i]>(m*c)):
