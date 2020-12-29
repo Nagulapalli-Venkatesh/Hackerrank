@@ -1,0 +1,49 @@
+#PROBLEM
+Hi! It'sa me a'Mario! The Super Mario!
+I'm soon going to the castle to save the princess (I hope she isnt in another castle).
+I'll be seeing her after a long time so i want to gift her an amazing diamond ring made out of asterisks 
+(Because we know asterisks are the most expensive tokens in this world).
+Since my best friend luigi has lost all his lives (should've taken the 1'ups) you must now help me to make the expensive diamond of asterisks for my princess.
+
+Input Format
+Input consists of one number N.
+Output Format
+Output an asterisk of diamonds as follows :
+
+Write a program that accepts a number N as input and prints the following pattern :  
+N = 1
+*
+N = 2
+ *
+***
+ *
+N = 3
+  *
+ ***
+*****
+ ***
+  *
+And so on
+
+Sample Input
+2
+Sample Output 0
+ *
+***
+ *
+ 
+#SOLUTION
+n=int(input()) 
+k=n
+t=1
+for i in range(n):
+    print(" "*(k-1)+("*"*t))
+    k=k-1
+    t=t+2
+    
+    if(i==n-1):
+        t=t-2
+        for j in range(1,n):
+            print(" "*(k+1)+("*"*(t-2)))
+            k=k+1
+            t=t-2
