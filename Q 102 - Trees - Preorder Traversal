@@ -1,0 +1,9 @@
+//C-prog. language
+void preorder(struct TreeNode* node) 
+{ 
+     if (node == NULL) 
+          return; 
+     printf("%d ", node->x);   
+     preorder(node->L);   
+     preorder(node->R); 
+}
