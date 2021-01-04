@@ -1,0 +1,49 @@
+#PROBLEM
+You are working for a company. Define a struct as follows :
+struct Employee{
+	char name[55];
+	int salary;
+}
+Given data of n employees, you are to use any sorting algorithm to sort them according to their salary in ascending order, and print them in the format "name salary".
+NOTE : Participants using Java shall use classes instead of structs.
+It is guaranteed that all names are distinct. If two people have the same salary, the one with lexicographically smaller name must come before the other.
+NOTE : you are not allowed to make any global variables. You must create another function to do the sorting and pass your employee array as 
+a pointer to that function to sort it.
+
+Input Format
+First line contains a number N, number of employees.
+Next N lines contain one string and one integer each.
+Output Format
+Print the data of all employees in the format "name salary" with details of one employee on one line.
+
+Sample Input
+5
+Abhinav 100
+Nischay 50
+Sarthak 25
+Abhiram 150
+Praneeth 200
+
+Sample Output
+Sarthak 25
+Nischay 50
+Abhinav 100
+Abhiram 150
+Praneeth 200
+
+#SOLUTION
+n = int(input())
+m = []
+for i in range(n):
+    m.append([x for x in input().split()])
+    
+for i in range(n):
+    for j in range(n-i-1):
+        if int(m[j][1]) > int(m[j+1][1]):
+            m[j], m[j+1] = m[j+1], m[j]
+        elif int(m[j][1]) == int(m[j+1][1]):
+            if m[j][0] > m[j+1][0]:
+                m[j], m[j+1] = m[j+1], m[j]
+                
+for i in range(n):
+    print(m[i][0],m[i][1])
