@@ -1,0 +1,41 @@
+#PROBLEM
+A postfix expression is of the form instead of the traditional infix expression which follows the form .
+Your task is to write a program that takes advantage of the stack data structure and converts a given infix expression into its postfix expression.
+
+INPUT
+There will be only a single line of input, the string that denotes the infix expression to be converted into its postfix counterpart.
+There are four arithmetic operations and capital letters used as variables/operands.
+Look at the sample Input/Output for clarity
+OUTPUT
+Output the final postfix expression after converting it to postfix from infix.
+
+Sample Input
+A+B
+Sample Output
+AB+
+
+#SOLUTION
+operators = set(['+', '-', '*', '/', '(', ')', '^'])
+priority = {'+':1, '-':1, '*':2, '/':2, '^':3}
+def infix_to_postfix(expression):
+    stack = []
+    output = ''
+    for ch in expression:
+        if ch not in operators:
+            output+= ch
+        elif ch=='(':
+            stack.append('(')
+        elif ch==')':
+            while stack and stack[-1]!= '(':
+                output+=stack.pop()
+            stack.pop()
+        else:
+            while stack and stack[-1]!='(' and priority[ch]<=priority[stack[-1]]:
+                output+=stack.pop()
+            stack.append(ch)
+    while stack:
+        output+=stack.pop()
+    return output
+
+expression = input()
+print(infix_to_postfix(expression))
