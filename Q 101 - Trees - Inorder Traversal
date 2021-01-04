@@ -1,4 +1,4 @@
-#C-prog. language
+//C-prog. language
 void inorder(TreeNode* node)
 {
     if (node == NULL) 
