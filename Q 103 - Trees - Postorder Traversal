@@ -1,0 +1,9 @@
+//c-prog. language
+void postorder(struct TreeNode* node) 
+{ 
+     if (node == NULL) 
+        return; 
+     postorder(node->L); 
+     postorder(node->R); 
+     printf("%d ", node->x); 
+} 
